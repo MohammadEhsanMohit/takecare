@@ -1,6 +1,7 @@
 package com.mabgroup.takecare.feature.peoplelist.domain.moodel
 
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import androidx.room.TypeConverter
 import androidx.room.TypeConverters
@@ -20,7 +21,10 @@ data class Patient(
     val communicationDescription: String = "",
     val needCompanion24: Boolean,
     val healthSummery: String = ""
-)
+) {
+    @get:Ignore
+    val fullname : String get() = "$firstName $lastName"
+}
 
 class GenderTypeConverts() {
 

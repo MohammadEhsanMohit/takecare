@@ -6,7 +6,7 @@ import androidx.room.TypeConverters
 import com.mabgroup.takecare.feature.peoplelist.domain.moodel.GenderTypeConverts
 import com.mabgroup.takecare.feature.peoplelist.domain.moodel.Patient
 
-@Database(entities = [(Patient::class)], version = 1, exportSchema = true)
+@Database(entities = [(Patient::class)], version = 1, exportSchema = false)
 @TypeConverters(GenderTypeConverts::class)
 abstract class PatientDataBase : RoomDatabase() {
     abstract val patientDao : PatientDao
