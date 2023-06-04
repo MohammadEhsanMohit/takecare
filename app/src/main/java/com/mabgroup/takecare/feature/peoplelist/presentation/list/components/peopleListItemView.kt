@@ -32,7 +32,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.graphics.ColorUtils
 import com.mabgroup.takecare.common.utils.Gender
 import com.mabgroup.takecare.common.utils.itemRandomColor
-import com.mabgroup.takecare.feature.peoplelist.domain.moodel.Patient
+import com.mabgroup.takecare.feature.peoplelist.domain.model.Patient
 import com.mabgroup.takecare.ui.theme.TakeCareTheme
 
 @Composable

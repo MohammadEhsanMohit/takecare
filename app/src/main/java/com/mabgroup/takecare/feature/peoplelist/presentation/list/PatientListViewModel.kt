@@ -4,7 +4,7 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mabgroup.takecare.feature.peoplelist.domain.moodel.Patient
+import com.mabgroup.takecare.feature.peoplelist.domain.model.Patient
 import com.mabgroup.takecare.feature.peoplelist.domain.use_case.PatientListUseCase
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.launchIn

@@ -5,7 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.mabgroup.takecare.feature.peoplelist.domain.moodel.Patient
+import com.mabgroup.takecare.feature.peoplelist.domain.model.Patient
 import kotlinx.coroutines.flow.Flow
 
 @Dao

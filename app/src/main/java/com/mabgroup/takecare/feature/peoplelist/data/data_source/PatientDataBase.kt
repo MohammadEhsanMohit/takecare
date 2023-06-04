@@ -3,8 +3,8 @@ package com.mabgroup.takecare.feature.peoplelist.data.data_source
 import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.mabgroup.takecare.feature.peoplelist.domain.moodel.GenderTypeConverts
-import com.mabgroup.takecare.feature.peoplelist.domain.moodel.Patient
+import com.mabgroup.takecare.feature.peoplelist.domain.model.GenderTypeConverts
+import com.mabgroup.takecare.feature.peoplelist.domain.model.Patient
 
 @Database(entities = [(Patient::class)], version = 1, exportSchema = false)
 @TypeConverters(GenderTypeConverts::class)

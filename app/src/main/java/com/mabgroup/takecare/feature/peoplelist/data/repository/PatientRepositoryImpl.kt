@@ -1,7 +1,7 @@
 package com.mabgroup.takecare.feature.peoplelist.data.repository
 
 import com.mabgroup.takecare.feature.peoplelist.data.data_source.PatientDao
-import com.mabgroup.takecare.feature.peoplelist.domain.moodel.Patient
+import com.mabgroup.takecare.feature.peoplelist.domain.model.Patient
 import com.mabgroup.takecare.feature.peoplelist.domain.repository.PatientRepository
 
 class PatientRepositoryImpl(

@@ -1,6 +1,6 @@
 package com.mabgroup.takecare.feature.peoplelist.domain.repository
 
-import com.mabgroup.takecare.feature.peoplelist.domain.moodel.Patient
+import com.mabgroup.takecare.feature.peoplelist.domain.model.Patient
 import kotlinx.coroutines.flow.Flow
 
 interface PatientRepository {

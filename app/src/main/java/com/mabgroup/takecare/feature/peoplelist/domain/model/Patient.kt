@@ -1,4 +1,4 @@
-package com.mabgroup.takecare.feature.peoplelist.domain.moodel
+package com.mabgroup.takecare.feature.peoplelist.domain.model
 
 import androidx.room.Entity
 import androidx.room.Ignore
