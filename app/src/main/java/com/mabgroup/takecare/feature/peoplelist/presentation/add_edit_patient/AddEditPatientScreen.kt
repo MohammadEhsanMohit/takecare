@@ -24,9 +24,11 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.composeapplication.feature.note.presentation.add_edit_note.components.TransparentHintTextField
+import com.mabgroup.takecare.common.utils.Gender
 import com.mabgroup.takecare.common.utils.itemColors
 import com.mabgroup.takecare.common.utils.itemRandomColor
 import com.mabgroup.takecare.feature.peoplelist.domain.model.Patient
+import com.mabgroup.takecare.feature.peoplelist.presentation.add_edit_patient.components.KindRadioGroup
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.koin.androidx.compose.koinViewModel
@@ -41,6 +43,7 @@ fun AddEditNoteScreen(
 ) {
     val titleState = viewModel.patientFirstName.value
     val contentState = viewModel.patientFamily.value
+    val gender = viewModel.patientGender.value
 
     val scaffoldState = remember { SnackbarHostState() }
 
@@ -164,7 +167,7 @@ fun AddEditNoteScreen(
                         modifier = Modifier.fillMaxHeight()
                     )
                     Spacer(modifier = Modifier.height(16.dp))
-
+                    KindRadioGroup(mItems = Gender.values(), selected = gender, setSelected = { selected -> viewModel.onEvent(AddEditPatientEvent.ChangeGender(selected.ordinal)) })
                 }
             }
         }

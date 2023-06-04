@@ -25,29 +25,6 @@ import com.mabgroup.takecare.R
 import com.mabgroup.takecare.common.utils.Gender
 import com.mabgroup.takecare.ui.theme.BabyBlue
 
-/*@Composable
-fun KindRadioGroupUsage(
-    modifier: Modifier,
-    setSelected: (selected: Gender) -> Unit,
-    selected : Gender
-) {
-    val newSelected = remember {
-        mutableStateOf(selected.toString())
-    }
-    val kinds = Gender.values()
-    Row(modifier = modifier) {
-        KindRadioGroup(
-            mItems = kinds,
-            selected,
-            setSelected
-        )
-        Text(
-            text = "Selected Option : $newSelected",
-            textAlign = TextAlign.Center,
-            modifier = Modifier.fillMaxWidth(),
-        )
-    }
-}*/
 
 @Composable
 fun KindRadioGroup(
@@ -64,7 +41,7 @@ fun KindRadioGroup(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            Text(text = "${stringResource(id = R.string.gender_title)}: ${newSelected.value.toString()}",
+            Text(text = stringResource(id = R.string.gender_title),
             style = MaterialTheme.typography.titleSmall,
             textAlign = TextAlign.Start,
             modifier = Modifier.fillMaxWidth()
