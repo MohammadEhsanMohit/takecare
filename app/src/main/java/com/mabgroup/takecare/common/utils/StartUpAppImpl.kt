@@ -10,9 +10,9 @@ import org.koin.core.context.startKoin
 
 class StartUpAppImpl : StartUpApp {
 
-    override fun prepareDependencyInjection(appCtx: Context) {
+    override fun prepareDependencyInjection(androidContext: Context) {
         startKoin {
-            androidContext(appCtx)
+            androidContext(androidContext)
             modules(
                 listOf(
                     appModule,

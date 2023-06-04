@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">TakeCare</string>
+    <string name="description_of_communication">خلاصه وضعیت ارتباطی فرد</string>
+    <string name="patient_first_name">اسم کوچک</string>
+    <string name="patient_last_name">فامیل بیمار</string>
+    <string name="description_health_summery">خلاصه وضعیت سلامتی</string>
+    <string name="description_mobility_summery">خلاصه وضعیت حرکتی</string>
+    <string name="gender_title">جنسیت</string>
 </resources>

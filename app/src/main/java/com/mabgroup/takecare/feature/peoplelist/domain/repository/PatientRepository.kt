@@ -10,5 +10,5 @@ interface PatientRepository {
 
     suspend fun deletePatient(patient: Patient)
 
-    suspend fun getPatientById(patientId: Long) : Patient
+    suspend fun getPatientById(patientId: Long) : Patient?
 }

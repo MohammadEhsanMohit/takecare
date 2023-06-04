@@ -124,7 +124,8 @@ fun PreviewPatientView() {
                     true,
                     "",
                     false,
-                    "حالش خوبه و مشکل نداره فعلا"
+                    "حالش خوبه و مشکل نداره فعلا",
+                    color = itemRandomColor
                 ), modifier = Modifier.fillMaxWidth()
                     .clickable {
                         println("Click Ob Patient View")
