@@ -6,4 +6,11 @@
     <string name="description_health_summery">خلاصه وضعیت سلامتی</string>
     <string name="description_mobility_summery">خلاصه وضعیت حرکتی</string>
     <string name="gender_title">جنسیت</string>
+    <string name="patient_deleted_message">فرد حذف گردید</string>
+
+    <string name="note_order_title">نام</string>
+    <string name="note_order_date">تاریخ</string>
+    <string name="note_order_color">رنگ</string>
+    <string name="note_order_type_Ascending">صعودی</string>
+    <string name="note_order_type_descending">نزولی</string>
 </resources>

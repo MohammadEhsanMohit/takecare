@@ -26,8 +26,6 @@ import androidx.navigation.NavController
 import com.example.composeapplication.feature.note.presentation.add_edit_note.components.TransparentHintTextField
 import com.mabgroup.takecare.common.utils.Gender
 import com.mabgroup.takecare.common.utils.itemColors
-import com.mabgroup.takecare.common.utils.itemRandomColor
-import com.mabgroup.takecare.feature.peoplelist.domain.model.Patient
 import com.mabgroup.takecare.feature.peoplelist.presentation.add_edit_patient.components.KindRadioGroup
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -36,9 +34,9 @@ import org.koin.androidx.compose.koinViewModel
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun AddEditNoteScreen(
+fun AddEditPatientScreen(
     navController: NavController,
-    noteColor: Int,
+    pColor: Int,
     viewModel: AddEditPatientViewModel = koinViewModel()
 ) {
     val titleState = viewModel.patientFirstName.value
@@ -49,7 +47,7 @@ fun AddEditNoteScreen(
 
     val noteBackgroundAnimatable = remember {
         Animatable(
-            Color(if (noteColor != -1) noteColor else viewModel.patientColor.value)
+            Color(if (pColor != -1) pColor else viewModel.patientColor.value)
         )
     }
     val scope = rememberCoroutineScope()
@@ -166,8 +164,9 @@ fun AddEditNoteScreen(
                         textStyle = MaterialTheme.typography.bodySmall,
                         modifier = Modifier.fillMaxHeight()
                     )
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(8.dp))
                     KindRadioGroup(mItems = Gender.values(), selected = gender, setSelected = { selected -> viewModel.onEvent(AddEditPatientEvent.ChangeGender(selected.ordinal)) })
+                    Spacer(modifier = Modifier.height(8.dp))
                 }
             }
         }
