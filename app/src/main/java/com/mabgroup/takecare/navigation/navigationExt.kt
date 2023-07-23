@@ -10,7 +10,7 @@ import com.mabgroup.takecare.feature.peoplelist.presentation.add_edit_patient.Ad
 import com.mabgroup.takecare.feature.peoplelist.presentation.add_edit_patient.AddEditPatientViewModel
 import com.mabgroup.takecare.feature.peoplelist.presentation.list.PatientListScreen
 import com.mabgroup.takecare.feature.peoplelist.presentation.util.PatientScreen
-import com.mabgroup.takecare.navigation.RouteConstant.FeatureRoutesNAME.PATIENT_LIST_SCREEN
+import com.mabgroup.takecare.navigation.RouteConstant.PATIENT_GRAPH_ROUE
 import com.mabgroup.takecare.navigation.RouteConstant.PatientNavLinkPARAM.PATIENT_LIST_SCREEN_URL_PARAMETER
 import org.koin.androidx.compose.getViewModel
 import org.koin.core.parameter.parametersOf
@@ -18,7 +18,7 @@ import org.koin.core.parameter.parametersOf
 fun NavGraphBuilder.patientGraph(navController: NavController) {
     navigation(
         startDestination = PatientScreen.PatientListScreen.route,
-        route = PATIENT_LIST_SCREEN
+        route = PATIENT_GRAPH_ROUE
     ) {
         composable(route = PatientScreen.PatientListScreen.route) {
             PatientListScreen(navController = navController)

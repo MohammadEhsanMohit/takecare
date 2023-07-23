@@ -1,18 +1,20 @@
 package com.mabgroup.takecare.navigation
 
-import com.mabgroup.takecare.navigation.RouteConstant.FeatureRoutesNAME.PATIENT_ADD_EDIT_SCREEN
+import com.mabgroup.takecare.navigation.RouteConstant.FeatureRoutesName.PATIENT_ADD_EDIT_SCREEN
 
 
 object RouteConstant {
-    const val PATIENT_SCREEN = "patientScreen"
+    const val PATIENT_GRAPH_ROUE = "patientScreen"
 
-    object FeatureRoutesNAME {
+    object FeatureRoutesName {
         const val PATIENT_LIST_SCREEN = "patient_screen"
         const val PATIENT_ADD_EDIT_SCREEN = "add_edit_patient_screen"
+        const val SPLASH_SCREEN = "splashScreen"
+        const val SPLASH_TO_PATIENT_LIST = PATIENT_LIST_SCREEN
     }
 
     object PatientNavLinkPARAM {
-        const val PATIENT_LIST_SCREEN_URL_PARAMETER = "$PATIENT_ADD_EDIT_SCREEN?patient={patientId}&pColor={patientColor}"
+        const val   PATIENT_LIST_SCREEN_URL_PARAMETER = "$PATIENT_ADD_EDIT_SCREEN?patient={patientId}&pColor={patientColor}"
     }
 
 

@@ -1,5 +1,6 @@
 package com.mabgroup.takecare.di
 
+import com.mabgroup.takecare.feature.splash.domain.user_case.CheckUserLogin
 import com.mabgroup.takecare.feature.peoplelist.domain.use_case.AddPatientUseCase
 import com.mabgroup.takecare.feature.peoplelist.domain.use_case.GetPatientUseCase
 import com.mabgroup.takecare.feature.peoplelist.domain.use_case.PatientAddEditUseCase
@@ -12,5 +13,7 @@ val useCaseModule = module {
         GetPatientUseCase(get()),
         AddPatientUseCase(get())
     ) }
-
+    factory {
+        CheckUserLogin(get())
+    }
 }

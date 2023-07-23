@@ -32,10 +32,23 @@ class PatientListViewModel(
 
     fun onEvent(event: PatientListEvent) {
         when(event) {
-            is PatientListEvent.DeleteNote -> TODO()
-            is PatientListEvent.Order -> TODO()
-            PatientListEvent.RestoreNote -> TODO()
-            PatientListEvent.ToggleOrderSection -> TODO()
+            is PatientListEvent.DeleteNote -> {
+
+            }
+            is PatientListEvent.Order -> {
+                _state.value = state.value.copy(
+                    patientListOrder = event.listOrder
+                )
+
+            }
+            PatientListEvent.RestoreNote -> {
+
+            }
+            is PatientListEvent.ToggleOrderSection -> {
+                _state.value = state.value.copy(
+                    isOrderSectionVisible = event.open
+                )
+            }
         }
     }
 

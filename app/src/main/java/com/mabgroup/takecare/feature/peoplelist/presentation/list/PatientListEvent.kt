@@ -7,5 +7,5 @@ sealed class PatientListEvent {
     data class Order(val listOrder: PatientListOrder) : PatientListEvent()
     data class DeleteNote(val patient: Patient) : PatientListEvent()
     object RestoreNote : PatientListEvent()
-    object ToggleOrderSection : PatientListEvent()
+    data class ToggleOrderSection(val open:Boolean) : PatientListEvent()
 }

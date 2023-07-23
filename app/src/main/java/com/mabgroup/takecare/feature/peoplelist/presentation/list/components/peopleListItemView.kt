@@ -41,7 +41,7 @@ fun PeopleListItemView(
     modifier: Modifier,
     cornerRadius: Dp = 10.dp,
     cutCornerSize: Dp = 30.dp,
-    itemColor: Int = itemRandomColor,
+    itemColor: Int,
     onDeleteClick: () -> Unit,
 ) {
     Box(
@@ -130,7 +130,7 @@ fun PreviewPatientView() {
                     .clickable {
                         println("Click Ob Patient View")
                     }
-            ) {
+            , itemColor = itemRandomColor) {
 
             }
         }

@@ -22,6 +22,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Star
+import androidx.compose.material.icons.rounded.AccountBox
+import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -57,7 +59,7 @@ fun PatientListScreen(
 ) {
     val state = viewModel.state.value
     val scope = rememberCoroutineScope()
-
+    val message = stringResource(id =  R.string.remove_person)
     val snackbarHostState = remember { SnackbarHostState() }
 
     Scaffold(
@@ -70,7 +72,7 @@ fun PatientListScreen(
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
-                    contentDescription = "Add Note"
+                    contentDescription = stringResource(id = R.string.add_patient)
                 )
             }
         },
@@ -87,14 +89,14 @@ fun PatientListScreen(
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Your Note",
+                    text = stringResource(id = R.string.your_patient),
                     style = MaterialTheme.typography.titleLarge
                 )
                 IconButton(onClick = {
-                    viewModel.onEvent(PatientListEvent.ToggleOrderSection)
+                    viewModel.onEvent(PatientListEvent.ToggleOrderSection(!state.isOrderSectionVisible))
                 }) {
                     Icon(
-                        imageVector = Icons.Default.Star,
+                        imageVector = Icons.Rounded.Settings,
                         contentDescription = "Sort"
                     )
                 }
@@ -127,14 +129,15 @@ fun PatientListScreen(
                             viewModel.onEvent(PatientListEvent.DeleteNote(patient))
                             scope.launch {
                                 val result = snackbarHostState.showSnackbar(
-                                    message = "فرد حذف گردید",
+                                    message = message,
                                     //actionLabel = "Undo"
                                 )
                                 if (result == SnackbarResult.ActionPerformed) {
                                     viewModel.onEvent(PatientListEvent.RestoreNote)
                                 }
                             }
-                        }
+                        },
+                        itemColor = patient.color
                     )
                     Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.space_medium)))
                 }

@@ -13,4 +13,7 @@
     <string name="note_order_color">رنگ</string>
     <string name="note_order_type_Ascending">صعودی</string>
     <string name="note_order_type_descending">نزولی</string>
+    <string name="add_patient">افزودن</string>
+    <string name="your_patient">افراد شما</string>
+    <string name="remove_person">فرد حذف گردید</string>
 </resources>
